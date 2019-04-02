@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Bluetooth Connection</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="close()" icon-only>
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <img src="assets/imgs/lock-icon.png" *ngIf="!espUnlocked">
+    <img src="assets/imgs/unlock-icon.png" *ngIf="espUnlocked">
+</ion-content>

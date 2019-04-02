@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>User</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()" icon-only>
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <p>Welcome to the user page.</p>
+  <p>Here you can deactivate the alarm </p>
+  <p><button ion-button round outline large="true" (click)="connect()" >Connect Bluetooth</button></p>
+</ion-content>

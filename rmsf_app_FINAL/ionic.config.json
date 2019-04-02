@@ -1,0 +1,8 @@
+{
+  "name": "rmsf_app",
+  "app_id": "e5e0decf",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

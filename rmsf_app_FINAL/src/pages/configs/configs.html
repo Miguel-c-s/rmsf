@@ -1,0 +1,49 @@
+<!--
+  Generated template for the ConfigsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Configurations</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list>
+  <ion-item>
+      <ion-label>Time buzzing {{buzzTime}} ( seconds )</ion-label> <!-- buzzTime in the database-->
+    <ion-range min="0" max="120" pin="true" step="5"  color="secondary" [(ngModel)]="buzzTime">
+      <ion-label range-left>0</ion-label>
+      <ion-label range-right>120</ion-label>
+    </ion-range>
+  </ion-item>
+
+ <ion-item>
+    <ion-label>Time to unlock {{connectTime}} ( seconds ) </ion-label> <!-- alarm timeout in the database // values on database are not according to this!-->
+   <ion-range min="0" max="60" pin="true" step="10" color="secondary" [(ngModel)]="connectTime">
+    <ion-label range-left>0</ion-label>
+    <ion-label range-right>60</ion-label>
+   </ion-range>
+ </ion-item>
+
+  <ion-item>
+    <ion-label>Time until alarm reactivation {{alarmReactivate}} ( seconds ) </ion-label> <!-- -->
+    <ion-range min="0" max="300" pin="true" step="30" color="secondary" [(ngModel)]="alarmReactivate">
+    <ion-label range-left>0</ion-label>
+    <ion-label range-right>300</ion-label>
+  </ion-range>
+  
+  </ion-item>
+
+
+
+  <button ion-button round outline large (click)="saveConfigs()"> Save changes</button>
+
+
+</ion-list>
+</ion-content>

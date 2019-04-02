@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>RMSF Alarm System</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background">
+	<ion-card>
+		<ion-card-header>
+			Login
+		</ion-card-header>
+		<ion-card-content>
+			<ion-list no-line>
+				<ion-item>
+					<ion-input type="email" placeholder="Username" [(ngModel)]="username"></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+        <div padding>
+          <button ion-button block (click)="login()">Log in</button>
+        </div>
+			</ion-list>
+		</ion-card-content>
+	</ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <a>Made in IST</a>
+  </ion-toolbar>
+</ion-footer>

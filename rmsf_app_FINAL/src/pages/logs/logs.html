@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Logs</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of data?.reverse()">
+      <ion-icon name="wifi" item-start *ngIf="item.method == 'wifi'" ></ion-icon>
+      <ion-icon name="bluetooth" item-start *ngIf="item.method == 'bluetooth'"></ion-icon>
+      <ion-icon name="alert" item-start *ngIf="item.intrusion == '1'"></ion-icon>      
+      <h2 *ngIf="item.intrusion == '0'">{{ item.username }}</h2>
+      <h2 *ngIf="item.intrusion == '1'">Intrusion</h2>
+      <p *ngIf="item.intrusion == '0'">Method: {{ item.method }}</p>
+      <p *ngIf="item.intrusion == '1'">Sensor: {{ item.sensor }}</p>
+      <p *ngIf="item.method == 'wifi'">State: {{ item.sensor }}</p>      
+      <ion-note item-end>{{ item.datetime | date : "dd/MM/y HH:mm"}}</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>

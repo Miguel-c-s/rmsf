@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Administrator</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()" icon-only>
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<!-- This is the html of the admin page, each button calls a function or goes to a new page-->
+
+<ion-content padding>
+  <p>Welcome to the administrator page. </p>
+  <p>Here you can control the sensors, check logs or buzz the alarm.</p>
+  <p><button ion-button round outline large="true" (click)="enableAlarm()">Enable alarm</button></p>
+  <p><button ion-button round outline large="true" (click)="disableAlarm()">Disable alarm</button></p>
+  <p><button ion-button round outline large ="true" [navPush]="logsPage">Check logs</button></p>
+  <p><button ion-button round outline large ="true" (click)="buzzer()">Activate Buzzer</button></p>
+  <p><button ion-button round outline large ="true" [navPush]="configsPage">Configurations</button></p>
+  <p><button ion-button round outline large ="true" (click)="connect()">Connect Bluetooth</button></p>
+</ion-content>
