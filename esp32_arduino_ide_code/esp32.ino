@@ -5,8 +5,8 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 
-const char* ssid = "***REMOVED***";
-const char* password = "***REMOVED***";
+const char* ssid = "ssid";
+const char* password = "pw";
 
 const char* mqttServer = "rmsf.hadrons.xyz";
 const int mqttPort = 1883;
@@ -19,8 +19,8 @@ char bluetooth_buffer[100];
 WiFiClient espClient;
 PubSubClient client(espClient);
 
-#define SERVICE_UUID        "***REMOVED***"
-#define CHARACTERISTIC_UUID "***REMOVED***"
+#define SERVICE_UUID        "service uuid"
+#define CHARACTERISTIC_UUID "charact uuid"
 
 #define S_ON 1
 #define S_OFF 2
